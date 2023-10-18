@@ -1,5 +1,5 @@
 import { FaLeaf } from "react-icons/fa";
-import { AiFillStar } from "react-icons/ai";
+// import { AiFillStar } from "react-icons/ai";
 
 const RestaurantInfo = ({ restaurant }) => {
   return (
@@ -8,9 +8,7 @@ const RestaurantInfo = ({ restaurant }) => {
         <h2 className="heading-text">{restaurant?.name}</h2>
 
         <p>{restaurant?.cuisines?.join(", ")}</p>
-        <p>
-          {restaurant?.areaName}, {restaurant?.city}
-        </p>
+
         {restaurant?.veg && (
           <p className="mtop10">
             <FaLeaf color="green" /> Pure Veg

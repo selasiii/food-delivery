@@ -1,4 +1,4 @@
-import { NavLink, Link, useLocation } from "react-router-dom";
+import {NavLink, Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Title = () => {
@@ -8,9 +8,9 @@ const Title = () => {
         data-testid="logo"
         className="logo"
         alt="logo"
-        src="https://icon-library.com/images/food-app-icon/food-app-icon-0.jpg"
+        src="icon.png"
       />
-      <p className="logo-text colblack">Go Foods.</p>
+      <p className="logo-text colblack">GhFoods.</p>
     </Link>
   );
 };
@@ -28,25 +28,21 @@ const Header = () => {
         <div className="navigation-menu">
           <div className="nav-items">
             <ul>
-              <li className="search-header-box">
-                <NavLink to="/search" className="search-header">
-                  <svg
-                    className="searchSVG"
-                    viewBox="5 -1 12 25"
-                    height="17"
-                    width="17"
-                    fill="#686b78"
-                  >
-                    <path d="M17.6671481,17.1391632 L22.7253317,22.1973467 L20.9226784,24 L15.7041226,18.7814442 C14.1158488,19.8024478 12.225761,20.3946935 10.1973467,20.3946935 C4.56550765,20.3946935 0,15.8291858 0,10.1973467 C0,4.56550765 4.56550765,0 10.1973467,0 C15.8291858,0 20.3946935,4.56550765 20.3946935,10.1973467 C20.3946935,12.8789625 19.3595949,15.3188181 17.6671481,17.1391632 Z M10.1973467,17.8453568 C14.4212261,17.8453568 17.8453568,14.4212261 17.8453568,10.1973467 C17.8453568,5.97346742 14.4212261,2.54933669 10.1973467,2.54933669 C5.97346742,2.54933669 2.54933669,5.97346742 2.54933669,10.1973467 C2.54933669,14.4212261 5.97346742,17.8453568 10.1973467,17.8453568 Z"></path>
-                  </svg>
-                  Search
+              <li>
+                <NavLink to="/">
+                  <li>Home</li>
                 </NavLink>
               </li>
-
               <li>
-                <NavLink to="/contact">Offers</NavLink>
+                <NavLink to="/about">
+                  <li>About</li>
+                </NavLink>
               </li>
-
+              <li>
+                <NavLink to="/contact">
+                  <li>Contact</li>
+                </NavLink>
+              </li>
               <li className="cart-logo">
                 {location.pathname !== "/checkout" &&
                   location.pathname !== "/order-summary" && (

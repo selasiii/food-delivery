@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
-import CategoryMenu from "./CategoryMenu";
 import { ShimmerCards } from "./Shimmer";
 import { FETCH_RESTAURANTS } from "../constants";
 import useOnline from "../utils/useOnline";
@@ -11,7 +10,6 @@ import NotFound from "./NotFound";
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
-  const [categoryMenu, setCategoryMenu] = useState([]);
   const isOnline = useOnline();
 
   useEffect(() => {
@@ -30,9 +28,7 @@ const Body = () => {
 
     const resData = await checkJsonData(json);
 
-    setCategoryMenu(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.info
-    );
+
     setAllRestaurants(resData);
     setFilteredRestaurants(resData);
   }
@@ -54,7 +50,6 @@ const Body = () => {
         <NotFound />
       ) : (
         <>
-          {categoryMenu && <CategoryMenu categoryMenu={categoryMenu} />}
           <h1 className="main-content-text">
             Restaurants with online food delivery!
           </h1>

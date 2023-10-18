@@ -26,7 +26,7 @@ const RestaurantCards = ({
         {aggregatedDiscountInfoV3?.header && (
           <span className="img-discount-info">
             {" "}
-            {aggregatedDiscountInfoV3?.header +
+            {aggregatedDiscountInfoV3?.header.replace("₹", "GH₵") +
               " " +
               aggregatedDiscountInfoV3?.subHeader?.replace("₹", "GH₵")}
           </span>

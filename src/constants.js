@@ -13,7 +13,7 @@ export const FETCH_CATEGORY_MENU_URL =
 export const aboutContent = {
   title: "Get your food delivery without the hassle!",
   description:
-    "Go Foods was founded with a simple mission: to make it easier for people to get their food delivered. With a food delivery app in India, they make it easy for people to order food from their favorite restaurants and have it delivered right to their door. They work with some of the best restaurants in the area, so people can always get the food they want, when they want it. Whether they're in the mood for Indian food, Italian food, or something else, Go Foods has them covered. Plus, they offer great discounts on food delivery when people order through the app. With Go Foods, there's no need to go out to eat; they can bring the restaurant to you.",
+  "GhFoods was established with a straightforward mission: to simplify food delivery for the people of Ghana. Through a dedicated food delivery app designed for Ghana, GhFoods makes it convenient for individuals to order their favorite dishes from local restaurants and have them delivered directly to their doorstep. Collaborating with some of the finest restaurants in the region, GhFoods ensures that people can always savor their preferred cuisines, be it Ghanaian, Italian, or any other choice. Moreover, they provide attractive discounts on food deliveries for orders placed through the app. With GhFoods, there's no need to dine out; they bring the restaurant experience to your home."
 };
 
 export const FAQs = [
@@ -34,12 +34,6 @@ export const FAQs = [
     title: "What if I want to cancel my order?",
     description:
       "You can cancel your order before it is prepared by the restaurant. To cancel an order, you can go to your order history and select the cancel option. If the restaurant has already started preparing your order, cancellation may not be possible. In such cases, please contact our customer support for assistance.",
-  },
-  {
-    id: 4,
-    title: "What payment methods do you accept?",
-    description:
-      "We accept various payment methods including credit/debit cards, online banking, and digital wallets such as UPI, Apple Pay, and Google Pay. You can choose your preferred payment method during checkout.",
   },
   {
     id: 5,

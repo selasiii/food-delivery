@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { v4 as uuid } from "uuid";
 import { TbDiscountCheckFilled } from "react-icons/tb";
@@ -17,8 +17,8 @@ const OrderSummary = () => {
     return () => {
       dispatch(clearCart());
     };
-  }, []);
-
+  }, [dispatch]);
+  
   return Object.values(cartItems).length <= 0 ? (
     <Error />
   ) : (
@@ -30,7 +30,7 @@ const OrderSummary = () => {
         Your Order is Confirmed!
       </p>
 
-      <img className="display-img-md mtop10 mbottom10" src={ConfirmOrder} />
+      <img className="display-img-md mtop10 mbottom10" src={ConfirmOrder} alt=""/>
       <p>Sit back while we deliver it in less than 30 minutes!!</p>
       <p className="heading-text mtop20">Order Details</p>
       <p className="mbottom10">Order ID: #{orderID.toUpperCase()}</p>
@@ -42,12 +42,12 @@ const OrderSummary = () => {
               <p className="item-name">{item.name}</p>
 
               <p>{item.quantity} pc.</p>
-              <p>₹ {item.price / 100}</p>
+              <p>GH₵ {item.price / 100}</p>
             </div>
           ))}
           <div className="total-bill">
             <h3 className="subheading-text">To Pay</h3>
-            <h3 className="heading-text">₹ {totalAmount}</h3>
+            <h3 className="heading-text">GH₵ {totalAmount}</h3>
           </div>
         </div>
       </div>

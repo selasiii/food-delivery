@@ -18,7 +18,6 @@ const Body = lazy(() => import("./components/Body"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const RestaurantDetails = lazy(() => import("./components/RestaurantDetails"));
-const CategoryDetails = lazy(() => import("./components/CategoryDetails"));
 const Cart = lazy(() => import("./pages/Cart"));
 const Checkout = lazy(() => import("./pages/Checkout"));
 const OrderSummary = lazy(() => import("./pages/OrderSummary"));
@@ -59,14 +58,6 @@ const appRouter = createBrowserRouter([
         element: (
           <Suspense fallback={<ShimmerBlock />}>
             <RestaurantDetails />
-          </Suspense>
-        ),
-      },
-      {
-        path: "/restaurant/category/:categoryId",
-        element: (
-          <Suspense fallback={<ShimmerBlock />}>
-            <CategoryDetails />
           </Suspense>
         ),
       },

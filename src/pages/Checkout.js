@@ -5,7 +5,7 @@ import { address } from "../constants";
 
 import { BiHomeHeart } from "react-icons/bi";
 import { HiOfficeBuilding } from "react-icons/hi";
-import { BsFillCreditCardFill } from "react-icons/bs";
+// import { BsFillCreditCardFill } from "react-icons/bs";
 import { FaHandsHelping } from "react-icons/fa";
 
 const Checkout = () => {
@@ -54,9 +54,9 @@ const Checkout = () => {
                 onClick={() => setPaymentMethod("COD")}
               >
                 {" "}
-                <FaHandsHelping color="green" /> COD{" "}
+                <FaHandsHelping color="green" /> Cash On Delivery{" "}
               </button>
-              <button
+{/*               <button
                 className={
                   paymentMethod === "Credit Card"
                     ? "payment-option checkout-selected"
@@ -66,7 +66,7 @@ const Checkout = () => {
               >
                 {" "}
                 <BsFillCreditCardFill color="green" /> Credit Cards{" "}
-              </button>
+              </button> */}
             </div>
           </div>
         )}

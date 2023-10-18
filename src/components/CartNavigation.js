@@ -12,7 +12,7 @@ const CartNavigation = () => {
   return (
     <div className="cart-navigation">
       <p>
-        {cartCount} Item | Rs {totalAmount}
+        {cartCount} Item | GH₵ {totalAmount}
       </p>
 
       <Link to="/cart">
