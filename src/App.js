@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React/* , { lazy, Suspense } */ from "react";
 
-function App() {
+//Redux
+import { Provider } from "react-redux";
+import store from "./utils/store";
+
+//Routing
+import {
+/*   createBrowserRouter,
+  RouterProvider, */
+  Outlet,
+  ScrollRestoration,
+} from "react-router-dom";
+
+//Components
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+/* import Error from "./components/Error";
+import { ShimmerBlock } from "./components/Shimmer";
+ */
+//lazy loading pages
+/* const Body = lazy(() => import("./components/Body"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Cart = lazy(() => import("./pages/Cart"));
+const Checkout = lazy(() => import("./pages/Checkout"));
+const OrderSummary = lazy(() => import("./pages/OrderSummary")); */
+
+const AppLayout = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <ScrollRestoration />
+      <Header />
+      <Outlet />
+      <Footer />
+    </Provider>
   );
-}
+};
 
-export default App;
+export default AppLayout;
